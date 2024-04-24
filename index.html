@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="kp" id="kp">
+
+
+    <div style="height: 100vh; display: flex; justify-content: center; align-items: center;" >Листаем</div>
+    <div class="kp">
       <div class="section-frame">
         <div class="kp-wrap">
           <div class="kp-content">
@@ -153,99 +156,90 @@
                   </defs>
                 </svg>
               </div>
-              <div class="kp-rout__info">
-                <div class="counter__box">
-                  <div
-                    class="counter__number"
-                    style="animation: counter 3s; --num: 30"
-                  ></div>
-                  <span>мин</span>
-                </div>
-                <div class="counter__box">
-                  <div
-                    class="counter__number counter__number--distance"
-                    style="animation: counter 3s; --num: 5"
-                  ></div>
-                  <span class="counter__number--distance">км</span>
-                </div>
+              <div class="kp-rout__info  counter__box ">
+                  <p class="kp-rout__min counter__number"><span class="js-counter" data-target="30" data-interval="70">0</span> мин</p>
+                  <p class="kp-rout__km  counter__number counter__number--distance"><span class="js-counter js-counter--km counter__number--distance" data-target="5" data-interval="400">0</span> км</p>
+              </div>
+
+
               </div>
             </div>
-          </div>
-          <div class="kp-list">
-            <a
-              href="#"
-              class="kp-item js-popup"
-              data-btn="Городская инфраструктура"
-              data-popup="kp-1"
-            >
-              <img
-                alt=""
-                data-src="images/uploads/2023/11/kp-1.jpg"
-                class="ls-is-cached lazyloaded"
-                src="images/uploads/2023/11/kp-1.jpg"
-              />
-              <noscript
-                ><img src="images/uploads/2023/11/kp-1.jpg" alt=""
-              /></noscript>
-              <span>Городская инфраструктура</span>
-            </a>
-            <a
-              href="#"
-              class="kp-item js-popup"
-              data-btn="Расположение у&nbsp;воды"
-              data-popup="kp-2"
-            >
-              <img
-                alt=""
-                data-src="images/uploads/2023/11/kp-2.jpg"
-                class="ls-is-cached lazyloaded"
-                src="images/uploads/2023/11/kp-2.jpg"
-              />
-              <noscript
-                ><img src="images/uploads/2023/11/kp-2.jpg" alt=""
-              /></noscript>
-              <span
-                >Расположение <br />
-                у&nbsp;воды</span
+            <div class="kp-list">
+              <a
+                href="#"
+                class="kp-item js-popup"
+                data-btn="Городская инфраструктура"
+                data-popup="kp-1"
               >
-            </a>
-            <a
-              href="#"
-              class="kp-item js-popup"
-              data-btn="Активный отдых в&nbsp;летнее и&nbsp;зимнее время"
-              data-popup="kp-3"
-            >
-              <img
-                alt=""
-                data-src="/images/uploads/2023/11/kp-3.jpg"
-                class="ls-is-cached lazyloaded"
-                src="images/uploads/2023/11/kp-3.jpg"
-              />
-              <noscript
-                ><img src="images/uploads/2023/11/kp-3.jpg" alt=""
-              /></noscript>
-              <span
-                >Активный отдых <br />
-                в&nbsp;зимнее и&nbsp;летнее время</span
+                <img
+                  alt=""
+                  data-src="images/uploads/2023/11/kp-1.jpg"
+                  class="ls-is-cached lazyloaded"
+                  src="images/uploads/2023/11/kp-1.jpg"
+                />
+                <noscript
+                  ><img src="images/uploads/2023/11/kp-1.jpg" alt=""
+                /></noscript>
+                <span>Городская инфраструктура</span>
+              </a>
+              <a
+                href="#"
+                class="kp-item js-popup"
+                data-btn="Расположение у&nbsp;воды"
+                data-popup="kp-2"
               >
-            </a>
-            <a
-              href="#"
-              class="kp-item js-popup"
-              data-btn="Развитая система коммуникаций"
-              data-popup="kp-4"
-            >
-              <img
-                alt=""
-                data-src="images/uploads/2023/11/kp-4.jpg"
-                class="ls-is-cached lazyloaded"
-                src="images/uploads/2023/11/kp-4.jpg"
-              />
-              <noscript
-                ><img src="images/uploads/2023/11/kp-4.jpg" alt=""
-              /></noscript>
-              <span>Развитая система коммуникаций</span>
-            </a>
+                <img
+                  alt=""
+                  data-src="images/uploads/2023/11/kp-2.jpg"
+                  class="ls-is-cached lazyloaded"
+                  src="images/uploads/2023/11/kp-2.jpg"
+                />
+                <noscript
+                  ><img src="images/uploads/2023/11/kp-2.jpg" alt=""
+                /></noscript>
+                <span
+                  >Расположение <br />
+                  у&nbsp;воды</span
+                >
+              </a>
+              <a
+                href="#"
+                class="kp-item js-popup"
+                data-btn="Активный отдых в&nbsp;летнее и&nbsp;зимнее время"
+                data-popup="kp-3"
+              >
+                <img
+                  alt=""
+                  data-src="/images/uploads/2023/11/kp-3.jpg"
+                  class="ls-is-cached lazyloaded"
+                  src="images/uploads/2023/11/kp-3.jpg"
+                />
+                <noscript
+                  ><img src="images/uploads/2023/11/kp-3.jpg" alt=""
+                /></noscript>
+                <span
+                  >Активный отдых <br />
+                  в&nbsp;зимнее и&nbsp;летнее время</span
+                >
+              </a>
+              <a
+                href="#"
+                class="kp-item js-popup"
+                data-btn="Развитая система коммуникаций"
+                data-popup="kp-4"
+              >
+                <img
+                  alt=""
+                  data-src="images/uploads/2023/11/kp-4.jpg"
+                  class="ls-is-cached lazyloaded"
+                  src="images/uploads/2023/11/kp-4.jpg"
+                />
+                <noscript
+                  ><img src="images/uploads/2023/11/kp-4.jpg" alt=""
+                /></noscript>
+                <span>Развитая система коммуникаций</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
