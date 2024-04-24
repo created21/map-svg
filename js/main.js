@@ -344,13 +344,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 1900);
 
-
-
-
-
-
-
-
-
-    // Задержка в 1000 миллисекунд
 });
