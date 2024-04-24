@@ -1,8 +1,58 @@
+// Функция для запуска счетчика при достижении блока "kp"
+function startCounterOnScroll() {
+    var counters = document.querySelectorAll('.js-counter');
+
+    // Переменная для отслеживания, был ли счетчик запущен
+    var counterStarted = false;
+
+    // Функция для проверки, достиг ли блок "kp"
+    function checkIfReached() {
+        var kpElement = document.querySelector('.kp');
+        var rect = kpElement.getBoundingClientRect();
+        var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        // Если блок "kp" виден на экране
+        if (rect.top < windowHeight && rect.bottom >= 0 && !counterStarted) {
+            // Запускаем счетчик
+            startCounter();
+            // Устанавливаем флаг, чтобы не запускать счетчик снова
+            counterStarted = true;
+        }
+    }
+
+    // Запускаем проверку при загрузке и прокрутке страницы
+    window.addEventListener('load', checkIfReached);
+    window.addEventListener('scroll', checkIfReached);
+}
+
+// Функция для запуска счетчика
+function startCounter() {
+    var counters = document.querySelectorAll('.js-counter');
+
+    counters.forEach(counter => {
+        var target = +counter.getAttribute('data-target');
+        var current = +counter.innerText;
+        var increment = target > current ? 1 : -1; // Определяем направление инкремента
+        var intervalTime = parseInt(counter.dataset.interval) || 70; // Получаем значение интервала из атрибута или устанавливаем значение по умолчанию
+
+        // Запуск интервала для увеличения счетчика
+        var interval = setInterval(() => {
+            if (current !== target) {
+                current += increment;
+                counter.innerText = current;
+            } else {
+                clearInterval(interval); // Останавливаем интервал, когда достигнуто значение
+            }
+        }, intervalTime); // Интервал в миллисекундах
+    });
+}
+
+// Запускаем счетчик при достижении блока "kp"
+startCounterOnScroll();
 
 
-// Ждем загрузки документа
 document.addEventListener('DOMContentLoaded', function () {
-    // Ждем 1000 миллисекунд (1 секунду) перед выполнением замены
+
     // Find the SVG element with id="map-road"
     const svgMapRoad = document.getElementById('map-road');
     setTimeout(function () {
@@ -343,5 +393,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }, 1900);
-
 });
